@@ -34,8 +34,8 @@ fn main() {
                     continue
                 }
             };
-            let f = convert_to_fahrenheit(temp);
-            println!("The temperature in Fahrenheit is: {}", f);
+            let f = convert_to_celsuis(temp);
+            println!("The temperature in Celsuis is: {}", f);
             break
         } else if input == 2 {
             let temp: f32 = match temp.trim().parse() {
@@ -45,8 +45,8 @@ fn main() {
                     continue
                 }
             };
-            let c = convert_to_celsuis(temp);
-            println!("The temperature in Celsuis is: {}", c);
+            let c = convert_to_fahrenheit(temp);
+            println!("The temperature in Fahrenheit is: {}", c);
             break
         } else if input == 3 {
             break
@@ -56,14 +56,14 @@ fn main() {
     }
 }
 
-fn convert_to_fahrenheit(x: f32) -> f32 {
-    let fahrenheit: f32 = x - 32.0;
-    let fahrenheit = fahrenheit * 0.55555;
-    fahrenheit
+fn convert_to_celsuis (x: f32) -> f32 {
+    let celsuis: f32 = x - 32.0;
+    let celsuis = celsuis * 0.55555;
+    celsuis
 }
 
-fn convert_to_celsuis (x: f32) -> f32 {
-    let celsuis: f32 = x * 1.8;
-    let celsuis = celsuis + 32.0;
-    celsuis
+fn convert_to_fahrenheit (x: f32) -> f32 {
+    let fahrenheit: f32 = x * 1.8;
+    let fahrenheit = fahrenheit + 32.0;
+    fahrenheit
 }
