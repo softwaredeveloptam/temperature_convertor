@@ -30,7 +30,7 @@ fn main() {
             let temp: f32 = match temp.trim().parse() {
                 Ok(num) => num,
                 Err(_) => {
-                    println!("Invalid input. Must be a floating number\n");
+                    println!("Invalid input. Temperature must be a number\n");
                     continue
                 }
             };
